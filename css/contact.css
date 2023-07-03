@@ -132,8 +132,10 @@ main .main__contact {
   font-weight: normal;
   line-height: 31px; }
   main .main__contact .main__telephone {
+    width: 131px;
     color: #46466E; }
   main .main__contact .main__email {
+    width: 255px;
     color: #24A3FF; }
 main .main__social a {
   display: flex;
