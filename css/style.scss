@@ -193,17 +193,17 @@ main {
                 bottom: 11px;
                 overflow: hidden;
 
-                &::after {
-                    content: '';
-                    display: block;
-                    width: 311px;
-                    border: 2px solid rgba(255, 255, 255, 0.30);
-                }
+                // &::before {
+                //     content: '';
+                //     display: block;
+                //     width: 311px;
+                //     border: 2px solid rgba(255, 255, 255, 0.30);
+                // }
 
                 ul {
                     display: flex;
                     gap: 30px;
-                    padding-bottom: 34px;
+                    padding-bottom: 33px;
                     width: 1003px;
 
                     li {
@@ -220,9 +220,14 @@ main {
                 }
             }
 
+            .border {
+                width: 315px;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+            }
+
             .idea {
-                margin-top: 18px;
-                margin-bottom: 29px;
+                margin-top: 30px;
+                margin-bottom: 18px;
                 line-height: normal;
 
                 h2 {
@@ -254,6 +259,9 @@ main {
                     margin-top: 9px;
                     font-size: 30px;
                     line-height: normal;
+                    background: linear-gradient(118deg, #F0145A 0%, #EF8080 100%); 
+                    -webkit-background-clip: text; 
+                    -webkit-text-fill-color: transparent;
                 }
 
                 .service__items {
@@ -313,9 +321,9 @@ main {
                     margin-bottom: 31px;
                     font-size: 30px;
                     line-height: normal;
-                    background: linear-gradient(#F0145A, #EF8080);
+                    background: linear-gradient(118deg, #F0145A 0%, #EF8080 100%); 
+                    -webkit-background-clip: text; 
                     -webkit-text-fill-color: transparent;
-                    -webkit-background-clip: text;
                 }
 
                 .name {
@@ -702,11 +710,6 @@ footer {
         .main__container {
             .wrapper__main {
                 .main__tabs {
-
-                    &::after {
-                        width: 648px;
-                    }
-
                     top: 20px;
                     bottom: 0;
 
@@ -720,9 +723,13 @@ footer {
                     }
                 }
 
+                .border {
+                    width: 648px;
+                }
+
                 .idea {
-                    margin-top: 80px;
-                    margin-bottom: 59px;
+                    margin-top: 60px;
+                    margin-bottom: 80px;
 
                     h2 {
                         font-size: 30px;
@@ -981,6 +988,377 @@ footer {
 
             p {
                 width: 276px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .wrapper__header,
+    .wrapper__main,
+    .wrapper__footer {
+        width: 904px;
+        margin: 0 auto;
+    }
+
+    header {
+        margin: 0;
+
+        .header__container {
+            background-size: 670px;
+            height: 768px;
+        }
+
+        .header__contact {
+            gap: 10px;
+            justify-content: end;
+
+            .header__address {
+                position: relative;
+                right: 4px;
+            }
+
+            .header__telephone {
+                position: relative;
+                right: 8px;
+            }
+
+            .header__address p,
+            .header__telephone a,
+            .header__facebook {
+
+                &::before {
+                    content: '';
+                    position: relative;
+                    top: 4px;
+                    right: 1px;
+                    margin-right: 6px;
+                    display: block;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 6px;
+                    background: #E6E6F0;
+                }
+            }
+
+            .header__facebook {
+                position: unset;
+
+                &::before {
+                    position: relative;
+                    top: 8px;
+                    right: 12px;
+                }
+            }
+        }
+
+        .header__logo-burger {
+            .header__logo {
+                position: relative;
+                bottom: 35px;
+                margin: 0;
+            }
+        }
+
+        .header__menu {
+            position: relative;
+            bottom: 51px;
+
+            ul {
+                justify-content: end;
+            }
+        }
+
+        h1 {
+            top: 192px;
+        }
+    }
+
+    main {
+        .main__container {
+            .wrapper__main {
+                .main__tabs {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 9px;
+
+                    ul {
+                        flex-direction: column;
+                        gap: 38px;
+                        margin-top: 15px;
+                        width: 375px;
+                    }
+                }
+
+                .border {
+                    position: relative;
+                    width: 0;
+                    height: 303px;
+                    bottom: 9px;
+                    border: 2px solid rgba(255, 255, 255, 0.3);
+                }
+
+                .idea {
+                    margin-top: 5px;
+                    width: 405px;
+                }
+
+                .services {
+                    .service__items {
+
+                        .ecommerce,
+                        .support,
+                        .relationships,
+                        .building,
+                        .property,
+                        .representation {
+                            width: 261px;
+                        }
+
+                        h4 {
+                            width: 261px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .wrapper__main {
+            .teams {
+                display: flex;
+
+                .team-img {
+                    width: 400px;
+                    height: 528px;
+                    background: url(../img/teams/aleksander-tablet-hd.png) center center no-repeat;
+                }
+
+                .team {
+                    width: 444px;
+
+                    h3 {
+                        margin-top: 6px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+        .contaiter__publications {
+            padding-top: 29px;
+
+            .publications__items {
+                flex-wrap: nowrap;
+                gap: 2px;
+
+                .equity,
+                .gdpr,
+                .millennial {
+                    width: 281px;
+                }
+
+                .equity__img {
+                    margin-bottom: 3px;
+                    width: 281px;
+                    height: 200px;
+                    background: url(../img/publications/tablet-hd/equity.png) center center no-repeat;
+                }
+
+                .gdpr__img {
+                    margin-bottom: 3px;
+                    width: 281px;
+                    height: 200px;
+                    background: url(../img/publications/tablet-hd/gdpr.png) center center no-repeat;
+                }
+
+                .millennial {
+                    .millenial__img {
+                        margin-bottom: 3px;
+                        width: 281px;
+                        height: 200px;
+                        background: url(../img/publications/tablet-hd/millennial.png) center center no-repeat;
+                    }
+
+                    .information {
+                        .date {
+                            &::after {
+                                width: 218px;
+                            }
+                        }
+                    }
+                }
+
+                .information {
+                    .date {
+                        &::after {
+                            width: 218px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer__container {
+            .footer__copyright {
+                position: unset;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .wrapper__header,
+    .wrapper__main,
+    .wrapper__footer {
+        width: 1320px;
+        margin: 0 auto;
+    }
+
+    header {
+        .header__container {
+            background-size: 697px;
+            height: 799px;
+        }
+
+        h1 {
+            top: 208px;
+        }
+    }
+
+    main {
+        .main__container {
+            .wrapper__main {
+                .idea {
+                    margin-top: 40px;
+                    width: 581px;
+                }
+
+                .main__tabs {
+                    margin-bottom: 35px;
+                }
+
+                .services {
+                    .service__items {
+
+                        .ecommerce,
+                        .support,
+                        .relationships,
+                        .building,
+                        .property,
+                        .representation {
+                            width: 400px;
+                        }
+
+                        .support {
+                            h4 {
+                                width: 304px;
+                            }
+                        }
+
+                        .property {
+                            p {
+                                width: 399px;
+                            }
+                        }
+
+                        h4 {
+                            width: 400px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .wrapper__main {
+            .teams {
+                .team {
+                    margin-top: 2px;
+                    width: 860px;
+
+                    h3 {
+                        margin-top: 5px;
+                    }
+                }
+
+                .team-img {
+                    width: 400px;
+                    height: 344px;
+                    background: url(../img/teams/aleksander-desktop.png) center center no-repeat;
+                }
+            }
+        }
+
+        .wrpaper__tabs {
+            width: 1080px;
+            margin: 0 auto;
+        }
+
+        .clients {
+
+            .hillel,
+            .wanna-biz,
+            .tapgerine,
+            .look,
+            .orangear,
+            .adtelli,
+            .clickky,
+            .easing,
+            .infratek,
+            .park,
+            .art-print,
+            .card {
+                width: 360px;
+            }
+        }
+
+        .contaiter__publications {
+
+            .publications__items {
+
+                .equity,
+                .gdpr,
+                .millennial {
+                    width: 420px;
+                }
+
+                .equity__img {
+                    width: 420px;
+                    height: 200px;
+                    background: url(../img/publications/desktop/equity.png) center center no-repeat;
+                }
+
+                .gdpr__img {
+                    width: 420px;
+                    height: 200px;
+                    background: url(../img/publications/desktop/gdpr.png) center center no-repeat;
+                }
+
+                .millennial {
+                    .millenial__img {
+                        width: 420px;
+                        background: url(../img/publications/desktop/millennial.png) center center no-repeat;
+                    }
+
+                    .information {
+                        .date {
+                            &::after {
+                                width: 356px;
+                            }
+                        }
+                    }
+                }
+
+                .information {
+                    .date {
+                        &::after {
+                            width: 356px;
+                        }
+                    }
+                }
             }
         }
     }
