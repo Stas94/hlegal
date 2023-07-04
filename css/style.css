@@ -99,8 +99,11 @@ header {
           color: #fff; }
     header .header__contact .header__address {
       display: none; }
-    header .header__contact .header__telephone a {
-      color: #fff; }
+    header .header__contact .header__telephone {
+      position: relative;
+      z-index: 10; }
+      header .header__contact .header__telephone a {
+        color: #fff; }
     header .header__contact .header__facebook {
       display: none; }
   header .header__logo-burger {
@@ -111,7 +114,7 @@ header {
       position: relative;
       width: 169px;
       height: 57px;
-      background: url(../img/logo.png) no-repeat; }
+      background: url(../img/logo-services.png) no-repeat; }
     header .header__logo-burger .burger {
       width: 32px;
       height: 32px;
@@ -125,7 +128,6 @@ header {
     margin: 0 auto;
     position: relative;
     top: 131px;
-    width: 315px;
     color: #FFF;
     text-align: center;
     font-size: 38px;
@@ -141,7 +143,7 @@ main .main__container {
   main .main__container .wrapper__main .main__tabs {
     position: relative;
     bottom: 11px;
-    width: 1003px; }
+    overflow: hidden; }
     main .main__container .wrapper__main .main__tabs::after {
       content: '';
       display: block;
@@ -150,7 +152,8 @@ main .main__container {
     main .main__container .wrapper__main .main__tabs ul {
       display: flex;
       gap: 30px;
-      padding-bottom: 34px; }
+      padding-bottom: 34px;
+      width: 1003px; }
       main .main__container .wrapper__main .main__tabs ul li {
         text-align: right;
         font-size: 30px;
@@ -205,6 +208,10 @@ main .wrapper__main .teams {
   border-radius: 12px;
   background: #F5F5FA;
   margin-top: 50px; }
+  main .wrapper__main .teams .team-img {
+    width: 315px;
+    height: 500px;
+    background: url(../img/teams/oleksandr.png) center center no-repeat; }
   main .wrapper__main .teams .team {
     padding: 30px; }
     main .wrapper__main .teams .team a {
@@ -214,7 +221,8 @@ main .wrapper__main .teams {
       letter-spacing: 1px;
       text-transform: uppercase; }
     main .wrapper__main .teams .team h3 {
-      margin-bottom: 32px;
+      margin-top: 4px;
+      margin-bottom: 31px;
       font-size: 30px;
       line-height: normal;
       background: linear-gradient(#F0145A, #EF8080);
@@ -225,7 +233,7 @@ main .wrapper__main .teams {
       color: #B3B3BA;
       line-height: 20px; }
     main .wrapper__main .teams .team .position {
-      color: var(--grey-text, #B3B3BA);
+      color: #B3B3BA;
       font-size: 14px;
       font-weight: 400;
       line-height: 22px; }
@@ -255,19 +263,49 @@ main .wrapper__main .trust {
     text-align: center; }
 main .clients {
   display: flex;
-  margin-top: 30px;
   flex-direction: column;
-  align-items: center; }
-  main .clients div {
-    height: 120px; }
-  main .clients div:nth-child(7),
-  main .clients div:nth-child(8),
-  main .clients div:nth-child(9),
-  main .clients div:nth-child(10),
-  main .clients div:nth-child(11),
-  main .clients div:nth-child(12) {
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; }
+  main .clients .hillel {
+    display: flex;
+    justify-content: center;
+    padding: 36px 78px 36px 80px;
+    background: #1C4280; }
+  main .clients .wanna-biz {
+    display: flex;
+    justify-content: center;
+    padding: 43px 87px 44px 89px;
+    background: #143646; }
+  main .clients .tapgerine {
+    display: flex;
+    justify-content: center;
+    padding: 38px 97px 38px 99px;
+    background: linear-gradient(0deg, #F48B30 0%, #F48B30 100%), #F48B30; }
+  main .clients .look {
+    display: flex;
+    justify-content: center;
+    padding: 39px 97px 39px 98px;
+    background: #9E4DC3; }
+  main .clients .orangear {
+    display: flex;
+    justify-content: center;
+    padding: 38px 100px 38px 101px;
+    background: #FD9339; }
+  main .clients .adtelli {
+    display: flex;
+    justify-content: center;
+    padding: 36px 89.583px 36px 90.625px;
+    background: #E2E2E4; }
+  main .clients .clickky,
+  main .clients .easing,
+  main .clients .infratek,
+  main .clients .park,
+  main .clients .art-print,
+  main .clients .card {
     display: none; }
 main .contaiter__publications {
+  padding-bottom: 32px;
   padding-top: 30px;
   background: #F5F5FA; }
   main .contaiter__publications .publications a {
@@ -288,11 +326,31 @@ main .contaiter__publications {
     display: flex;
     flex-direction: column;
     gap: 30px; }
+    main .contaiter__publications .publications__items .gdpr .information h4 {
+      position: relative;
+      bottom: 2px;
+      margin-bottom: 12px;
+      line-height: 20px; }
     main .contaiter__publications .publications__items .equity,
     main .contaiter__publications .publications__items .gdpr,
     main .contaiter__publications .publications__items .millennial {
       border-radius: 8px;
       background: #FFF; }
+    main .contaiter__publications .publications__items .equity__img {
+      margin-bottom: 3px;
+      width: 315px;
+      height: 201px;
+      background: url(../img/publications/equity.png) center center no-repeat; }
+    main .contaiter__publications .publications__items .gdpr__img {
+      margin-bottom: 3px;
+      width: 315px;
+      height: 200px;
+      background: url(../img/publications/gdpr.png) center center no-repeat; }
+    main .contaiter__publications .publications__items .millenial__img {
+      margin-bottom: 3px;
+      width: 315px;
+      height: 200px;
+      background: url(../img/publications/millennial.png) center center no-repeat; }
     main .contaiter__publications .publications__items .information {
       padding: 30px; }
       main .contaiter__publications .publications__items .information h4 {
@@ -370,72 +428,194 @@ footer {
     width: 648px;
     margin: 0 auto; }
 
-  header {
-    margin-bottom: 58px; }
-    header::before {
-      display: none; }
-    header .header__contact {
-      justify-content: unset;
-      gap: 6px;
-      padding-top: 51px; }
-      header .header__contact .header__address p,
-      header .header__contact .header__telephone a,
-      header .header__contact .header__facebook {
-        display: flex; }
-        header .header__contact .header__address p::before,
-        header .header__contact .header__telephone a::before,
-        header .header__contact .header__facebook::before {
-          content: '';
-          position: relative;
-          top: 4px;
-          right: 1px;
-          margin-right: 6px;
-          display: block;
-          width: 6px;
-          height: 6px;
-          border-radius: 6px;
-          background: #E6E6F0; }
-      header .header__contact .header__address {
-        display: flex;
-        font-weight: 400;
-        color: #B3B3BA; }
-      header .header__contact .header__facebook {
+  header::before {
+    display: none; }
+  header .header__container {
+    height: 1024px;
+    background: url(../img/symbol.png) center center no-repeat;
+    background-size: 893px; }
+  header .header__contact {
+    justify-content: unset;
+    gap: 6px;
+    padding-top: 51px; }
+    header .header__contact .header__address p,
+    header .header__contact .header__telephone a,
+    header .header__contact .header__facebook {
+      display: flex; }
+      header .header__contact .header__address p::before,
+      header .header__contact .header__telephone a::before,
+      header .header__contact .header__facebook::before {
+        content: '';
         position: relative;
-        left: 12px;
-        bottom: 2px;
-        width: 24px;
-        height: 24px;
-        background: url(../img/tablet/facebook.png) no-repeat; }
-        header .header__contact .header__facebook::before {
-          top: 10px;
-          right: 11px; }
-    header .header__logo-burger .header__logo {
-      margin-top: 20px;
-      margin-bottom: 33px;
-      width: 297px;
-      height: 60px;
-      background: url(../img/tablet/logo.png) no-repeat; }
-    header .header__logo-burger .burger {
-      display: none; }
-    header .header__menu {
-      display: block;
-      height: 25px; }
-      header .header__menu ul {
-        display: flex;
-        gap: 16px; }
-        header .header__menu ul a {
-          color: #24A3FF; }
-        header .header__menu ul .active a {
-          padding-bottom: 3px;
-          color: #F0145A;
-          border-bottom: 2px solid #F0145A; }
+        top: 4px;
+        right: 1px;
+        margin-right: 6px;
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 6px;
+        background: #E6E6F0; }
+    header .header__contact .header__address {
+      display: flex;
+      font-weight: 400;
+      color: #B3B3BA; }
+    header .header__contact .header__facebook {
+      position: relative;
+      left: 12px;
+      bottom: 2px;
+      width: 24px;
+      height: 24px;
+      background: url(../img/tablet/facebook.png) no-repeat; }
+      header .header__contact .header__facebook::before {
+        top: 10px;
+        right: 11px; }
+  header .header__logo-burger .header__logo {
+    margin-top: 20px;
+    margin-bottom: 33px;
+    width: 130px;
+    height: 60px;
+    background: url(../img/logo-homepage.png) no-repeat; }
+  header .header__logo-burger .burger {
+    display: none; }
+  header .header__menu {
+    display: block;
+    height: 25px; }
+    header .header__menu ul {
+      display: flex;
+      gap: 16px; }
+      header .header__menu ul a {
+        color: #FFF; }
+  header h1 {
+    top: 267px; }
+
+  main .main__container .wrapper__main .main__tabs {
+    top: 20px;
+    bottom: 0; }
+    main .main__container .wrapper__main .main__tabs::after {
+      width: 648px; }
+    main .main__container .wrapper__main .main__tabs ul {
+      padding-bottom: 63px;
+      width: 1246px; }
+      main .main__container .wrapper__main .main__tabs ul li {
+        font-size: 38px; }
+  main .main__container .wrapper__main .idea {
+    margin-top: 80px;
+    margin-bottom: 59px; }
+    main .main__container .wrapper__main .idea h2 {
+      font-size: 30px; }
+  main .main__container .wrapper__main .services h2 {
+    font-size: 38px; }
+  main .main__container .wrapper__main .services .service__items {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 58px; }
+    main .main__container .wrapper__main .services .service__items .ecommerce,
+    main .main__container .wrapper__main .services .service__items .support,
+    main .main__container .wrapper__main .services .service__items .relationships,
+    main .main__container .wrapper__main .services .service__items .building,
+    main .main__container .wrapper__main .services .service__items .property,
+    main .main__container .wrapper__main .services .service__items .representation {
+      width: 294px; }
+  main .wrapper__main .teams {
+    margin-top: 78px; }
+    main .wrapper__main .teams .team-img {
+      width: 648px;
+      height: 500px;
+      background: url(../img/teams/aleksander-tablet.png) center center no-repeat; }
+    main .wrapper__main .teams .team h3 {
+      font-size: 38px;
+      line-height: 46px; }
+  main .clients {
+    flex-direction: row;
+    flex-wrap: wrap; }
+    main .clients .hillel,
+    main .clients .wanna-biz,
+    main .clients .tapgerine,
+    main .clients .look,
+    main .clients .orangear,
+    main .clients .adtelli,
+    main .clients .clickky,
+    main .clients .easing,
+    main .clients .infratek,
+    main .clients .park,
+    main .clients .art-print,
+    main .clients .card {
+      width: 256px; }
+    main .clients .hillel {
+      padding: 36px 0; }
+    main .clients .wanna-biz {
+      padding: 0; }
+    main .clients .tapgerine {
+      padding: 38px 0; }
+    main .clients .look {
+      padding: 39px 0; }
+    main .clients .orangear {
+      padding: 38px 0; }
+    main .clients .adtelli {
+      padding: 61.156px 0 10px; }
+    main .clients .clickky {
+      display: flex;
+      justify-content: center;
+      padding: 29px 0 30px 0;
+      background: #C71C36; }
+    main .clients .easing {
+      display: flex;
+      justify-content: center;
+      padding: 22px 0;
+      background: #DCF3F9; }
+    main .clients .infratek {
+      display: flex;
+      justify-content: center;
+      padding: 30px 0;
+      background: #EAEAEA; }
+    main .clients .park {
+      display: flex;
+      justify-content: center;
+      padding: 41px 0;
+      background: #282240; }
+    main .clients .art-print {
+      display: flex;
+      justify-content: center;
+      padding: 37px 0;
+      background: #1D4568; }
+    main .clients .card {
+      display: flex;
+      justify-content: center;
+      padding: 13px 0 12px 0;
+      background: #000; }
+  main .contaiter__publications .publications__items {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    main .contaiter__publications .publications__items .equity,
+    main .contaiter__publications .publications__items .gdpr {
+      width: 309px; }
+    main .contaiter__publications .publications__items .equity__img {
+      width: 309px;
+      height: 199px;
+      background: url(../img/publications/tablet-sd/equity.png) center center no-repeat; }
+    main .contaiter__publications .publications__items .gdpr__img {
+      width: 309px;
+      height: 199px;
+      background: url(../img/publications/tablet-sd/gdpr.png) center center no-repeat; }
+    main .contaiter__publications .publications__items .millennial .millenial__img {
+      width: 648px;
+      background: url(../img/publications/tablet-sd/millenial.png) center center no-repeat; }
+    main .contaiter__publications .publications__items .millennial .information .date::after {
+      width: 584px; }
+  main .contaiter__publications .publications h3 {
+    margin-top: 8px;
+    font-size: 38px; }
 
   footer {
     padding: 30px 60px; }
     footer .footer__container {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: space-between;
+      flex-direction: unset;
+      align-items: unset;
       margin: 0; }
       footer .footer__container .footer__address {
         flex-direction: row;
@@ -458,7 +638,8 @@ footer {
             background: #B3B3BA; }
       footer .footer__container .footer__contact {
         flex-direction: row;
-        gap: 26px; }
+        gap: 26px;
+        width: 398px; }
         footer .footer__container .footer__contact .footer__telephone {
           margin-bottom: 7px; }
           footer .footer__container .footer__contact .footer__telephone::after {
@@ -475,6 +656,10 @@ footer {
         footer .footer__container .footer__contact .footer__email {
           margin-bottom: 12px; }
     footer .footer__copyright {
-      margin-top: 17px; } }
+      position: relative;
+      right: 26px;
+      margin-top: 1px; }
+      footer .footer__copyright p {
+        width: 276px; } }
 
 /*# sourceMappingURL=style.css.map */

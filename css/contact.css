@@ -92,8 +92,11 @@ header .header__contact {
         color: #B3B3BA; }
   header .header__contact .header__address {
     display: none; }
-  header .header__contact .header__telephone a {
-    color: #B3B3BA; }
+  header .header__contact .header__telephone {
+    position: relative;
+    z-index: 10; }
+    header .header__contact .header__telephone a {
+      color: #B3B3BA; }
   header .header__contact .header__facebook {
     display: none; }
 header .header__logo-burger {
