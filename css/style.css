@@ -136,51 +136,86 @@ header {
 main .main__container {
   border-radius: 0px 0px 12px 12px;
   background: linear-gradient(208deg, #323264 0%, #323264 59.9%, #643E72 100%); }
-  main .main__container .wrapper__main .header__srcoll {
-    text-align: center;
+  main .main__container .bg {
+    display: block;
+    margin: 0 auto;
     position: relative;
-    bottom: 72px; }
-  main .main__container .wrapper__main .main__tabs {
+    top: 20px;
+    width: 335px;
+    height: 10px;
+    border-radius: 0px 0px 12px 12px;
+    background: #CACADB; }
+  main .main__container .bg-middle {
+    display: block;
+    margin: 0 auto;
     position: relative;
-    bottom: 11px;
-    overflow: hidden; }
-    main .main__container .wrapper__main .main__tabs ul {
+    top: 20px;
+    width: 295px;
+    height: 10px;
+    border-radius: 0px 0px 12px 12px;
+    background: #E7E7F2; }
+  main .main__container .main__tabs {
+    margin-left: 30px;
+    position: relative;
+    top: 34px; }
+    main .main__container .main__tabs .tabs {
+      position: relative;
+      overflow: hidden; }
+    main .main__container .main__tabs ul {
       display: flex;
       gap: 30px;
       padding-bottom: 33px;
       width: 1003px; }
-      main .main__container .wrapper__main .main__tabs ul li {
+      main .main__container .main__tabs ul li {
         text-align: right;
-        font-size: 30px;
-        color: #B3B3BA; }
-      main .main__container .wrapper__main .main__tabs ul .active {
+        font-size: 30px; }
+        main .main__container .main__tabs ul li a {
+          color: #B3B3BA; }
+          main .main__container .main__tabs ul li a:hover {
+            color: #F0145A; }
+      main .main__container .main__tabs ul .active {
         background-image: linear-gradient(#EF8080, #F0145A);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text; }
-  main .main__container .wrapper__main .border {
+  main .main__container .border {
     width: 315px;
     border: 2px solid rgba(255, 255, 255, 0.3); }
-  main .main__container .wrapper__main .idea {
+  main .main__container .idea {
+    width: 315px;
     margin-top: 30px;
-    margin-bottom: 18px;
+    margin-bottom: 63px;
     line-height: normal; }
-    main .main__container .wrapper__main .idea h2 {
+    main .main__container .idea h2 {
       margin-bottom: 31px;
       color: #FFF;
       font-size: 20px; }
-    main .main__container .wrapper__main .idea p {
+    main .main__container .idea p {
       color: #FFF;
       font-size: 19px;
       font-weight: 400;
       line-height: 30px; }
+  main .main__container .wrapper__main .header__srcoll {
+    text-align: center;
+    position: relative;
+    bottom: 72px;
+    right: 21px; }
+    main .main__container .wrapper__main .header__srcoll .scroll {
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      background: url(../img/scroll.svg) center center no-repeat; }
+      main .main__container .wrapper__main .header__srcoll .scroll:hover {
+        background: url(../img/scroll-hover.svg) center center no-repeat; }
   main .main__container .wrapper__main .services {
-    padding-bottom: 59px; }
+    padding-bottom: 39px; }
     main .main__container .wrapper__main .services a {
       color: #24A3FF;
       font-size: 14px;
       line-height: normal;
       letter-spacing: 1px;
       text-transform: uppercase; }
+      main .main__container .wrapper__main .services a:hover {
+        color: #F0145A; }
     main .main__container .wrapper__main .services h2 {
       margin-top: 9px;
       font-size: 30px;
@@ -210,9 +245,8 @@ main .wrapper__main .teams {
   background: #F5F5FA;
   margin-top: 50px; }
   main .wrapper__main .teams .team-img {
-    width: 315px;
     height: 500px;
-    background: url(../img/teams/oleksandr.png) center center no-repeat; }
+    background: url(../img/teams/aleksander-mobile.png) center center no-repeat; }
   main .wrapper__main .teams .team {
     padding: 30px; }
     main .wrapper__main .teams .team a {
@@ -221,6 +255,8 @@ main .wrapper__main .teams {
       line-height: normal;
       letter-spacing: 1px;
       text-transform: uppercase; }
+      main .wrapper__main .teams .team a:hover {
+        color: #F0145A; }
     main .wrapper__main .teams .team h3 {
       margin-top: 4px;
       margin-bottom: 31px;
@@ -296,7 +332,7 @@ main .clients {
   main .clients .adtelli {
     display: flex;
     justify-content: center;
-    padding: 36px 89.583px 36px 90.625px;
+    padding: 36px 89px 36px 90px;
     background: #E2E2E4; }
   main .clients .clickky,
   main .clients .easing,
@@ -309,12 +345,14 @@ main .contaiter__publications {
   padding-bottom: 32px;
   padding-top: 30px;
   background: #F5F5FA; }
-  main .contaiter__publications .publications a {
-    color: var(--active-regular, #24A3FF);
+  main .contaiter__publications .publications .link {
+    color: #24A3FF;
     font-size: 14px;
     line-height: normal;
     letter-spacing: 1px;
     text-transform: uppercase; }
+    main .contaiter__publications .publications .link:hover {
+      color: #F0145A; }
   main .contaiter__publications .publications h3 {
     margin-top: 3px;
     margin-bottom: 30px;
@@ -355,8 +393,9 @@ main .contaiter__publications {
     main .contaiter__publications .publications__items .information {
       padding: 30px; }
       main .contaiter__publications .publications__items .information h4 {
-        margin-bottom: 16px;
-        color: #24A3FF; }
+        margin-bottom: 16px; }
+        main .contaiter__publications .publications__items .information h4 a {
+          color: #24A3FF; }
       main .contaiter__publications .publications__items .information .date {
         margin-bottom: 30px;
         color: #B3B3BA;
@@ -380,6 +419,12 @@ main .contaiter__publications {
 footer {
   padding: 30px;
   background: #F5F5FA; }
+  footer .wrapper__footer::before {
+    content: '';
+    display: block;
+    position: relative;
+    border-top: 2px solid #E6E6F0;
+    bottom: 31px; }
   footer .footer__container {
     margin-top: 3px; }
     footer .footer__container .footer__address {
@@ -466,7 +511,7 @@ footer {
       bottom: 2px;
       width: 24px;
       height: 24px;
-      background: url(../img/tablet/facebook.png) no-repeat; }
+      background: url(../img/tablet/facebook-white.svg) no-repeat; }
       header .header__contact .header__facebook::before {
         top: 10px;
         right: 11px; }
@@ -489,20 +534,25 @@ footer {
   header h1 {
     top: 267px; }
 
-  main .main__container .wrapper__main .main__tabs {
-    top: 20px;
-    bottom: 0; }
-    main .main__container .wrapper__main .main__tabs ul {
+  main .main__container .bg {
+    width: 728px; }
+  main .main__container .bg-middle {
+    width: 688px; }
+  main .main__container .main__tabs {
+    margin-left: 60px;
+    top: 65px; }
+    main .main__container .main__tabs ul {
       padding-bottom: 63px;
       width: 1246px; }
-      main .main__container .wrapper__main .main__tabs ul li {
+      main .main__container .main__tabs ul li {
         font-size: 38px; }
-  main .main__container .wrapper__main .border {
+  main .main__container .border {
     width: 648px; }
-  main .main__container .wrapper__main .idea {
+  main .main__container .idea {
+    width: 648px;
     margin-top: 60px;
-    margin-bottom: 80px; }
-    main .main__container .wrapper__main .idea h2 {
+    margin-bottom: 124px; }
+    main .main__container .idea h2 {
       font-size: 30px; }
   main .main__container .wrapper__main .services h2 {
     font-size: 38px; }
@@ -511,7 +561,7 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 60px;
-    margin-top: 58px; }
+    margin-top: 59px; }
     main .main__container .wrapper__main .services .service__items .ecommerce,
     main .main__container .wrapper__main .services .service__items .support,
     main .main__container .wrapper__main .services .service__items .relationships,
@@ -522,8 +572,6 @@ footer {
   main .wrapper__main .teams {
     margin-top: 78px; }
     main .wrapper__main .teams .team-img {
-      width: 648px;
-      height: 500px;
       background: url(../img/teams/aleksander-tablet.png) center center no-repeat; }
     main .wrapper__main .teams .team h3 {
       font-size: 38px;
@@ -547,7 +595,9 @@ footer {
     main .clients .hillel {
       padding: 36px 0; }
     main .clients .wanna-biz {
-      padding: 0; }
+      display: flex;
+      justify-content: center;
+      padding: 44px 0; }
     main .clients .tapgerine {
       padding: 38px 0; }
     main .clients .look {
@@ -555,7 +605,9 @@ footer {
     main .clients .orangear {
       padding: 38px 0; }
     main .clients .adtelli {
-      padding: 61.156px 0 10px; }
+      display: flex;
+      justify-content: center;
+      padding: 36px 0; }
     main .clients .clickky {
       display: flex;
       justify-content: center;
@@ -714,22 +766,27 @@ footer {
     header h1 {
       top: 192px; }
 
-  main .main__container .wrapper__main .main__tabs {
+  main .main__container .bg {
+    width: 984px; }
+  main .main__container .bg-middle {
+    width: 944px; }
+  main .main__container .main__tabs {
     display: flex;
     justify-content: space-between;
     margin-bottom: 9px; }
-    main .main__container .wrapper__main .main__tabs ul {
+    main .main__container .main__tabs ul {
       flex-direction: column;
       gap: 38px;
       margin-top: 15px;
       width: 375px; }
-  main .main__container .wrapper__main .border {
+  main .main__container .border {
     position: relative;
     width: 0;
     height: 303px;
     bottom: 9px;
     border: 2px solid rgba(255, 255, 255, 0.3); }
-  main .main__container .wrapper__main .idea {
+  main .main__container .idea {
+    margin-right: 60px;
     margin-top: 5px;
     width: 405px; }
   main .main__container .wrapper__main .services .service__items .ecommerce,
@@ -745,7 +802,7 @@ footer {
     display: flex; }
     main .wrapper__main .teams .team-img {
       width: 400px;
-      height: 528px;
+      height: 531px;
       background: url(../img/teams/aleksander-tablet-hd.png) center center no-repeat; }
     main .wrapper__main .teams .team {
       width: 444px; }
@@ -796,11 +853,16 @@ footer {
   header h1 {
     top: 208px; }
 
-  main .main__container .wrapper__main .idea {
+  main .main__container .bg {
+    width: 1400px; }
+  main .main__container .bg-middle {
+    width: 1360px; }
+  main .main__container .idea {
     margin-top: 40px;
+    margin-right: 0;
     width: 581px; }
-  main .main__container .wrapper__main .main__tabs {
-    margin-bottom: 35px; }
+  main .main__container .main__tabs {
+    margin: 0 auto 42px; }
   main .main__container .wrapper__main .services .service__items .ecommerce,
   main .main__container .wrapper__main .services .service__items .support,
   main .main__container .wrapper__main .services .service__items .relationships,
@@ -820,9 +882,10 @@ footer {
     main .wrapper__main .teams .team h3 {
       margin-top: 5px; }
   main .wrapper__main .teams .team-img {
-    width: 400px;
-    height: 344px;
+    height: 347px;
     background: url(../img/teams/aleksander-desktop.png) center center no-repeat; }
+  main .wrapper__main .trust {
+    margin-top: 58px; }
   main .wrpaper__tabs {
     width: 1080px;
     margin: 0 auto; }
@@ -845,18 +908,110 @@ footer {
     width: 420px; }
   main .contaiter__publications .publications__items .equity__img {
     width: 420px;
-    height: 200px;
-    background: url(../img/publications/desktop/equity.png) center center no-repeat; }
+    height: 201px;
+    background: url(../img/publications/desktop-sd/equity.png) center center no-repeat; }
   main .contaiter__publications .publications__items .gdpr__img {
     width: 420px;
-    height: 200px;
-    background: url(../img/publications/desktop/gdpr.png) center center no-repeat; }
+    height: 201px;
+    background: url(../img/publications/desktop-sd/gdpr.png) center center no-repeat; }
   main .contaiter__publications .publications__items .millennial .millenial__img {
     width: 420px;
-    background: url(../img/publications/desktop/millennial.png) center center no-repeat; }
+    height: 201px;
+    background: url(../img/publications/desktop-sd/millennial.png) center center no-repeat; }
   main .contaiter__publications .publications__items .millennial .information .date::after {
     width: 356px; }
   main .contaiter__publications .publications__items .information .date::after {
     width: 356px; } }
+@media screen and (min-width: 1920px) {
+  .wrapper__header,
+  .wrapper__main,
+  .wrapper__footer {
+    width: 1600px;
+    margin: 0 auto; }
+
+  header .header__container {
+    background-size: 872px;
+    height: 1000px; }
+  header h1 {
+    top: 308px; }
+
+  main .wrpaper__tabs {
+    width: 1360px;
+    margin: 0 auto; }
+  main .main__container .bg {
+    width: 1880px; }
+  main .main__container .bg-middle {
+    width: 1840px; }
+  main .main__container .main__tabs {
+    margin-bottom: 73px; }
+    main .main__container .main__tabs ul {
+      margin-right: 60px; }
+  main .main__container .idea {
+    margin-top: 68px;
+    margin-left: 60px;
+    width: 861px; }
+  main .main__container .wrapper__main .services .service__items .ecommerce,
+  main .main__container .wrapper__main .services .service__items .support,
+  main .main__container .wrapper__main .services .service__items .relationships,
+  main .main__container .wrapper__main .services .service__items .building,
+  main .main__container .wrapper__main .services .service__items .property,
+  main .main__container .wrapper__main .services .service__items .representation {
+    width: 493px; }
+  main .main__container .wrapper__main .services .service__items .support h4 {
+    width: 304px; }
+  main .main__container .wrapper__main .services .service__items .property p {
+    width: 481px; }
+  main .main__container .wrapper__main .services .service__items h4 {
+    width: 481px; }
+  main .wrapper__main .teams .team-img {
+    height: 301px;
+    background: url(../img/teams/aleksander-desktop-hd.png) center center no-repeat; }
+  main .wrapper__main .teams .team {
+    width: 1140px; }
+  main .wrapper__clients {
+    width: 1720px;
+    margin: 28px auto; }
+  main .clients .hillel,
+  main .clients .wanna-biz,
+  main .clients .tapgerine,
+  main .clients .look,
+  main .clients .orangear,
+  main .clients .adtelli,
+  main .clients .clickky,
+  main .clients .easing,
+  main .clients .infratek,
+  main .clients .park,
+  main .clients .art-print,
+  main .clients .card {
+    width: 430px; }
+  main .clients .hillel {
+    border-top-left-radius: 10px; }
+  main .clients .look {
+    border-top-right-radius: 10px; }
+  main .clients .infratek {
+    border-bottom-left-radius: 10px; }
+  main .clients .card {
+    border-bottom-right-radius: 10px; }
+  main .contaiter__publications {
+    padding-top: 62px; }
+    main .contaiter__publications .publications__items .equity,
+    main .contaiter__publications .publications__items .gdpr,
+    main .contaiter__publications .publications__items .millennial {
+      width: 513px; }
+    main .contaiter__publications .publications__items .equity__img {
+      width: 513px;
+      height: 200px;
+      background: url(../img/publications/desktop-hd/equity.png) center center no-repeat; }
+    main .contaiter__publications .publications__items .gdpr__img {
+      width: 513px;
+      height: 200px;
+      background: url(../img/publications/desktop-hd/gdpr.png) center center no-repeat; }
+    main .contaiter__publications .publications__items .millennial .millenial__img {
+      width: 513px;
+      background: url(../img/publications/desktop-hd/millennial.png) center center no-repeat; }
+    main .contaiter__publications .publications__items .millennial .information .date::after {
+      width: 450px; }
+    main .contaiter__publications .publications__items .information .date::after {
+      width: 450px; } }
 
 /*# sourceMappingURL=style.css.map */
